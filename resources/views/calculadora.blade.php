@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Calculadora</title>
+	<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+	
 </head>
 <body>
 <h1> Calculadora de {{$nombre}} </h1>
@@ -18,7 +20,7 @@
 	<input type="submit" name="calcular" value="multi">
 	<input type="submit" name="calcular" value="divi">
 	<input type="submit" name="calcular" value="elevado">
-
+	<button type="button" name="calcular" value="elevado" class="btn btn-primary">Primary</button>
 </form>
 
 @if(isset($resultado))
@@ -27,6 +29,6 @@
 @if(isset($error))
 	<h1> {{$error}} </h1>
 @endif
-
+<script src="{{url ('assets/js/components/bootstrap.js')}}"></script>
 </body>
 </html>
